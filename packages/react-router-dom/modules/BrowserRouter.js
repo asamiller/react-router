@@ -26,7 +26,7 @@ if (__DEV__) {
 
   BrowserRouter.prototype.componentDidMount = function() {
     warning(
-      !this.props.history,
+      this.props.history,
       "<BrowserRouter> ignores the history prop. To use a custom history, " +
         "use `import { Router }` instead of `import { BrowserRouter as Router }`."
     );
